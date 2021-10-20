@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import User from './components/User'
 import Counter  from './components/Counter';
+import InputExample from './components/InputExample';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <hr />
       <br />
       <Counter />
+      <hr /> <br />
+      <InputExample />
     </div>
   );
 }
