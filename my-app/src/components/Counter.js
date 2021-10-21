@@ -1,11 +1,28 @@
-import { useState} from 'react'
+import { useState, useEffect } from 'react'
 
 function Counter() {
     const [count, setCount] = useState(0)
 
+    useEffect(() => { 
+        console.log('Component is mounted.')
+
+        const interval = setInterval(() => {
+            setCount((n) => n + 1 )
+        }, 1000)
+        
+        return () => {
+            clearInterval(interval)
+            console.log('Component unmounted')}
+    } , [] )
+
+    useEffect(() => {
+        console.log('count state is updated.')
+    }, [ count ])
+
     const increase = () => {
         setCount( count + 1 )
     }
+
     return (
         <div>
             <h1>{count}</h1>
