@@ -12,7 +12,7 @@ function Counter() {
         
         return () => {
             clearInterval(interval)
-            console.log('Component unmounted')}
+            console.log('Component is unmounted')}
     } , [] )
 
     useEffect(() => {
